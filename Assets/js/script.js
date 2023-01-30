@@ -14,7 +14,7 @@ $(document).ready(function () {
     let text = $(this).siblings('.description').val();
 
     // returned values to be SET in local storage
-    localStorage.setItem(text, time);
+    localStorage.setItem(time, text);
   });
 
   //Ccrate function to get the curretn time in hours
@@ -62,9 +62,9 @@ $(document).ready(function () {
     $("#hour12 .description").val(localStorage.getItem("hour12"));
     $("#hour13 .description").val(localStorage.getItem("hour13"));
     $("#hour14 .description").val(localStorage.getItem("hour14"));
-    $("#hour15 .description").val(localStorage.getItem("hour15"));
-    $("#hour15 .description").val(localStorage.getItem("hour16"));
-    $("#hour15 .description").val(localStorage.getItem("hour17"));
+    $("#hour14 .description").val(localStorage.getItem("hour15"));
+    $("#hour16 .description").val(localStorage.getItem("hour16"));
+    $("#hour17 .description").val(localStorage.getItem("hour17"));
   // call the function
   getTime();
 });
