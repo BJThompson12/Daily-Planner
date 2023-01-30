@@ -16,11 +16,6 @@ $(document).ready(function () {
     // returned values to be SET in local storage
     localStorage.setItem(text, time);
   });
-  // local storage. HINT: What does `this` reference in the click listener
-  // function? How can DOM traversal be used to get the "hour-x" id of the
-  // time-block containing the button that was clicked? How might the id be
-  // useful when saving the description in local storage?
-  //
 
   //Ccrate function to get the curretn time in hours
   function getTime() {
@@ -66,4 +61,4 @@ $(document).ready(function () {
 var todayDate = moment().format('dddd, MMM Do');
 $('#currentDay').html(todayDate);
 
-const dailyPlanner = [];
+// const dailyPlanner = [];
