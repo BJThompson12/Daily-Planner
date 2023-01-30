@@ -35,13 +35,23 @@ $(document).ready(function () {
       let scheduledTime = parseInt($(this).attr('id').split('hour')[1]);
       //check if pulling calendar times
       console.log(scheduledTime);
+      //this referes to each element that is looped through
       //add class for past
       if (scheduledTime < presentTime) {
         $(this).removeClass('future');
         $(this).removeClass('present');
         $(this).addClass('past');
+      //add class for future  
+      } else if (scheduledTime > presentTime){
+        $(this).removeClass("present");
+        $(this).removeClass("past");
+        $(this).addClass("future");
+      //add class for present  
+      } else {
+        $(this).removeClass("past");
+        $(this).removeClass("future");
+        $(this).addClass("present");
       }
-      // console.log( index + ": " + $( this ).text() );
     });
   }
   getTime();
