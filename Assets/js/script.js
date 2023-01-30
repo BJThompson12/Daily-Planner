@@ -50,7 +50,6 @@ $(document).ready(function () {
       }
     });
   }
-  getTime();
   // TODO: Add code to get any user input that was saved in localStorage and set
   // the values of the corresponding textarea elements. HINT: How can the id
   // attribute of each time-block be used to do this?
@@ -64,11 +63,12 @@ $(document).ready(function () {
     $("#hour13 .description").val(localStorage.getItem("hour13"));
     $("#hour14 .description").val(localStorage.getItem("hour14"));
     $("#hour15 .description").val(localStorage.getItem("hour15"));
+
+  // call the function
+  getTime();
 });
 
 // TODO: Add code to display the current date in the header of the page.
-// create variable for date using m=Moment API
+// create variable for date using Moment API
 var todayDate = moment().format('dddd, MMM Do');
 $('#currentDay').html(todayDate);
-
-// const dailyPlanner = [];
