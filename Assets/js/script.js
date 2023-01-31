@@ -28,7 +28,7 @@ $(document).ready(function () {
     $('.time-block').each(function () {
       // variable to get elements with the scheduled time and turn string into integer
       // this pertains to the object/element it is getting the attributes for
-      let scheduledTime = parseInt($(this).attr('id').split('hour')[1]);
+      let scheduledTime = parseInt($(this).attr('id').split('-')[1]);
       //check if pulling calendar times
       console.log(scheduledTime);
       //this referes to each element that is looped through
@@ -66,6 +66,7 @@ $(document).ready(function () {
 
   // call the function
   getTime();
+  var timer = setInterval(getTime, 15000);
 });
 
 // create variable for date using Moment API
