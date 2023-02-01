@@ -66,7 +66,6 @@ $(document).ready(function () {
 
   // call the function
   getTime();
-  // var timer = setInterval(getTime, 15000);
 });
 
 // create variable for date using Moment API
